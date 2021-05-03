@@ -297,12 +297,15 @@
     <item name="course_date_title_line_spacing" format="float" type="dimen">1.25</item>
     <item name="course_date_desc_line_spacing" format="float" type="dimen">1.125</item>
 
-    <!--  Course Celebratory Modal  -->
+    <!-- Course Celebratory Modal -->
     <dimen name="celebratory_modal_padding">16dp</dimen>
     <dimen name="celebratory_share_button_size">34dp</dimen>
 
     <!-- What's New -->
     <dimen name="whats_new_image_horizontal_margin">25dp</dimen>
     <dimen name="whats_new_bottom_bar_min_height">46dp</dimen>
+
+    <!-- Snack bar -->
+    <dimen name="snack_bar_action_size">24dp</dimen>
 
 </resources>

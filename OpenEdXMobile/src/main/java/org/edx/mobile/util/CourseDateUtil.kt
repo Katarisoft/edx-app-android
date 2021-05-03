@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.TextUtils
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import org.edx.mobile.R
 import org.edx.mobile.model.course.CourseBannerInfoModel
@@ -20,6 +21,7 @@ object CourseDateUtil {
                                screenName: String, analyticsRegistry: AnalyticsRegistry,
                                courseBannerInfoModel: CourseBannerInfoModel, clickListener: View.OnClickListener) {
         val context = view.context as Context
+        val imgView = view.findViewById(R.id.iv_calender) as ImageView
         val textView = view.findViewById(R.id.banner_info) as TextView
         val button = view.findViewById(R.id.btn_shift_dates) as Button
         var buttonText = ""
@@ -57,12 +59,14 @@ object CourseDateUtil {
             if (!TextUtils.isEmpty(buttonText)) {
                 button.text = buttonText
                 button.visibility = View.VISIBLE
+                imgView.visibility = View.VISIBLE
                 button.setOnClickListener { v ->
                     clickListener.onClick(v)
                     analyticsRegistry.trackPLSShiftButtonTapped(courseId, enrollmentMode, screenName)
                 }
             } else {
                 button.visibility = View.GONE
+                imgView.visibility = View.GONE
             }
             view.visibility = View.VISIBLE
             analyticsRegistry.trackPLSCourseDatesBanner(biValue, courseId, enrollmentMode, screenName, bannerTypeValue)
