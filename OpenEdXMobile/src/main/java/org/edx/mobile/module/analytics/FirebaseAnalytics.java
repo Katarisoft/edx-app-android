@@ -748,4 +748,13 @@ public class FirebaseAnalytics implements Analytics {
         event.putString(Keys.CATEGORY, Values.NAVIGATION);
         logFirebaseEvent(event.getName(), event.getBundle());
     }
+
+    @Override
+    public void trackSubsectionViewOnWebTapped(@NonNull String courseId, @NonNull String blockId, boolean isSpecialExamInfo) {
+        final FirebaseEvent event = new FirebaseEvent(Events.SUBSECTION_VIEW_ON_WEB_TAPPED, Values.SUBSECTION_VIEW_ON_WEB_TAPPED);
+        event.putCourseId(courseId);
+        event.putString(Keys.BLOCK_ID, blockId);
+        event.putBoolean(Keys.SPECIAL_EXAM_INFO, isSpecialExamInfo);
+        logFirebaseEvent(event.getName(), event.getBundle());
+    }
 }

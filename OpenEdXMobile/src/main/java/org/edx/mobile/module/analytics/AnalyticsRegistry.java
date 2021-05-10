@@ -527,4 +527,11 @@ public class AnalyticsRegistry implements Analytics {
             service.trackResumeCourseBannerTapped(courseId, blockId);
         }
     }
+
+    @Override
+    public void trackSubsectionViewOnWebTapped(@NonNull String courseId, @NonNull String blockId, boolean isSpecialExamInfo) {
+        for (Analytics service : services) {
+            service.trackSubsectionViewOnWebTapped(courseId, blockId, isSpecialExamInfo);
+        }
+    }
 }
