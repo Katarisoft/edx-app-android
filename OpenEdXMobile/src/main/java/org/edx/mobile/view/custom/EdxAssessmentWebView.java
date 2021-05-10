@@ -6,6 +6,8 @@ import android.util.AttributeSet;
 public class EdxAssessmentWebView extends EdxWebView {
     public EdxAssessmentWebView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        getSettings().setSupportZoom(false);
+        getSettings().setSupportZoom(true);
+        getSettings().setDisplayZoomControls(false);
+        getSettings().setBuiltInZoomControls(true);
     }
 }

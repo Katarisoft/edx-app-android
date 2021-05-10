@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -99,6 +100,14 @@ public class CourseUnitNavigationActivity extends CourseBaseActivity implements
 
             @Override
             public void onPageSelected(int position) {
+                // Disable ViewPager2 scrolling to enable horizontal scrolling to for the WebView (Specific HTML Components).
+                if (pagerAdapter.getUnit(position).getType() == BlockType.DRAG_AND_DROP_V2) {
+                    pager2.setUserInputEnabled(false);
+                    Toast.makeText(CourseUnitNavigationActivity.this, "Swipe Disable Message", Toast.LENGTH_LONG).show();
+                } else if (!pager2.isUserInputEnabled()) {
+                    pager2.setUserInputEnabled(true);
+                    Toast.makeText(CourseUnitNavigationActivity.this, "Swipe Enable Message", Toast.LENGTH_LONG).show();
+                }
             }
 
             @Override
