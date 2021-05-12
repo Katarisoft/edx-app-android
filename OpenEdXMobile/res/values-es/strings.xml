@@ -89,6 +89,22 @@
   <!--Error during log in.-->
   <string name="login_failed">Por favor, asegúrese de que su nombre de usuario o dirección de correo electrónico y la contraseña son correctos e inténtelo de nuevo.</string>
   <!--License Agreement related string on Login and Regiser screens-->
+  <!-- New Logistration Launch screen text -->
+  <!-- Button leading user to create account screen -->
+  <string name="launch_register">Registro</string>
+  <!-- Button leading user to log in screen -->
+  <string name="launch_login">Acceder</string>
+  <!-- Introduction text on the launch screen -->
+  <string name="launch_text">Los mejores cursos MOOC de Ecuador a tu alcance.</string>
+  <!-- Introduction text on the launch screen when courses and program enabled  -->
+  <string name="launch_text_courses_and_program">Cursos y programas de estúdio para Ecuador a tu alcance.</string>
+  <!-- Search View title on the launch screen -->
+  <string name="launch_search_title">Que quieres estudiar?</string>
+  <!-- Search view leading user to Find Courses screen from the launch screen upon searching some text -->
+  <string name="launch_search_courses">Buscar cursos</string>
+  <!-- Label Explore all courses on the launch screen -->
+  <string name="label_explore_all_courses"><u>Explora todos los cursos</u></string>
+    
   <!--Create account agreement. Followed by list of agreement names like "End User License Agreement"-->
   <string name="by_creating_account">Al crear una cuenta, aceptas la {license} y las {tos_and_honor_code}, y permites que {platform_name} y cada miembro procesen tus datos personales de conformidad con la {privacy_policy}.</string>
   <!--Sign In agreement. Followed by list of agreement names like "End User License Agreement"-->
